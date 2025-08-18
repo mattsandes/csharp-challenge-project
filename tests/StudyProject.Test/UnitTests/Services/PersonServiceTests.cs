@@ -19,12 +19,11 @@ public class PersonServiceTests
 
         services = new PersonServices(personRepository.Object);
 
-        device = new Device
+        person = new Person
         {
             Id = 1,
-            DeviceName = "Test Device",
-            User = user,
-            UserId = 1
+            Name = "Test Person",
+            Users = new List<User>()
         };
 
         user = new User
@@ -39,15 +38,16 @@ public class PersonServiceTests
             PersonId = 1
         };
 
-        person = new Person
+        device = new Device
         {
             Id = 1,
-            Name = "Test Person",
-            Users = new List<User>
-            {
-                user
-            }
+            DeviceName = "Test Device",
+            User = user,
+            UserId = 1
         };
+
+        user.Device = device;
+        person.Users.Add(user);
     }
 
     [Test]
@@ -59,7 +59,6 @@ public class PersonServiceTests
 
         Assert.NotNull(peopleList);
         Assert.That(peopleList.Count, Is.EqualTo(1));
-        Assert.IsEmpty(peopleList);
     }
 
     [Test]
