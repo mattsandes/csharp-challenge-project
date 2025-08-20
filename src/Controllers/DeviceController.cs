@@ -27,7 +27,7 @@ public class DeviceController : Controller
     [HttpPost("createDevices")]
     [Produces("application/json")]
     [Consumes("application/json")]
-    public async Task<ActionResult<DeviceDTO>> CreateDevices(string username, createDevicedTO device)
+    public async Task<ActionResult<DeviceDTO>> CreateDevices(string username, CreateDeviceDTO device)
     {
         var devices = await _deviceService.CreateDevices(username, device);
 
