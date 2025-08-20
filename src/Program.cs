@@ -3,6 +3,7 @@ using StudyProject.Data;
 using StudyProject.Repositories;
 using StudyProject.Repositories.Interfaces;
 using StudyProject.Services;
+using StudyProject.Utils.Automapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,8 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<IDevicesRepository, DeviceRepository>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IUserRespoitory, UserRepository>();
+
+builder.Services.AddAutoMapper(typeof(ModelMapper));
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
