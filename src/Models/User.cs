@@ -8,8 +8,8 @@ public class User
     public int Accesses { get; set; }
     public DateTime Date { get; set; } = DateTime.UtcNow;
 
-    public Person Person { get; set; }
+    public Person? Person { get; set; }
     public long PersonId { get; set; }
 
-    public Device Device { get; set; }
+    public Device? Device { get; set; }
 }
