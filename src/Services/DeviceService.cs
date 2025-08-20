@@ -1,3 +1,4 @@
+using AutoMapper;
 using StudyProject.Data.ResponseDTOs.DTOs;
 using StudyProject.Models;
 using StudyProject.Repositories.Interfaces;
@@ -6,34 +7,32 @@ namespace StudyProject.Services;
 
 public class DeviceService
 {
-    private readonly IDevicesRepository deviceRepository;
-    private readonly IUserRespoitory userRespoitory;
+    private readonly IDevicesRepository _deviceRepository;
+    private readonly IUserRespoitory _userRespoitory;
+    private readonly IMapper _mapper;
 
     public DeviceService(
         IDevicesRepository deviceRepository,
-        IUserRespoitory userRepository)
+        IUserRespoitory userRepository,
+        IMapper mapper)
     {
-        this.deviceRepository = deviceRepository;
-        this.userRespoitory = userRepository;
+        _deviceRepository = deviceRepository;
+        _userRespoitory = userRepository;
+        _mapper = mapper;
     }
 
     public async Task<IEnumerable<DeviceDTO>> FindAllDevices()
     {
-        var deviceList = await deviceRepository.FindAllDevices();
+        var deviceList = await _deviceRepository.FindAllDevices();
 
-        var deviceListDto = deviceList.Select(d => new DeviceDTO
-        {
-            Id = d.Id,
-            DeviceName = d.DeviceName,
-            UserId = d.UserId
-        }).ToList();
+        var deviceListDto = _mapper.Map<IEnumerable<DeviceDTO>>(deviceList);
 
         return deviceListDto;
     }
 
-    public async Task<DeviceDTO> CreateDevices(string username, createDevicedTO createDevicedTO)
+    public async Task<DeviceDTO> CreateDevices(string username, CreateDeviceDTO createDevicedTO)
     {
-        var foundUser = await userRespoitory.FindByName(username);
+        var foundUser = await _userRespoitory.FindByName(username);
 
         if (string.IsNullOrEmpty(username))
         {
@@ -45,20 +44,13 @@ public class DeviceService
             throw new InvalidDataException("O dispositivo informado deve ser valido");
         }
 
-        var newDevice = new Device
-        {
-            DeviceName = createDevicedTO.DeviceName,
-            User = foundUser
-        };
+        var newDevice = _mapper.Map<Device>(createDevicedTO);
 
-        var createdDevice = await deviceRepository.CreateDevice(newDevice);
+        newDevice.User = foundUser;
 
-        var deviceDto = new DeviceDTO()
-        {
-            Id = createdDevice.Id,
-            DeviceName = createdDevice.DeviceName,
-            UserId = foundUser.Id
-        };
+        var createdDevice = await _deviceRepository.CreateDevice(newDevice);
+
+        var deviceDto = _mapper.Map<DeviceDTO>(createdDevice);
 
         return deviceDto;
     }
