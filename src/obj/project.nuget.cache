@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "K3JpCMea54yFu8RrfwNkiCPcSKhrhqtx5duv+0eosGrqu+Sn/9GyfFhfjluHUcRlSmNFQCH1uDnoNBDNZ2n9OA==",
+  "dgSpecHash": "64OP+fgDaudTA1PhWcnvFj2r1w17WzUOylDANymbC3AGRqDiCSwVrX8YSuFI8TPwhw/Sk/5D7PCv9vBWN4kIBg==",
   "success": true,
   "projectFilePath": "/Users/mateus.sandes/Personal/StudyProject/src/StudyProject.csproj",
   "expectedPackageFiles": [
+    "/Users/mateus.sandes/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/mateus.sandes/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/Users/mateus.sandes/.nuget/packages/dapper/2.1.66/dapper.2.1.66.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/microsoft.build.framework/17.8.3/microsoft.build.framework.17.8.3.nupkg.sha512",
@@ -14,6 +17,7 @@
     "/Users/mateus.sandes/.nuget/packages/microsoft.codeanalysis.csharp.workspaces/4.8.0/microsoft.codeanalysis.csharp.workspaces.4.8.0.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/microsoft.codeanalysis.workspaces.common/4.8.0/microsoft.codeanalysis.workspaces.common.4.8.0.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/microsoft.codeanalysis.workspaces.msbuild/4.8.0/microsoft.codeanalysis.workspaces.msbuild.4.8.0.nupkg.sha512",
+    "/Users/mateus.sandes/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/microsoft.entityframeworkcore/9.0.8/microsoft.entityframeworkcore.9.0.8.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.8/microsoft.entityframeworkcore.abstractions.9.0.8.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.8/microsoft.entityframeworkcore.analyzers.9.0.8.nupkg.sha512",

@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "szHL8xm+G3kzrkg7YIVkrdpngXcrMGnXmUhWZoNHeyX36joDF+t8sActuzOYj44EPk2ZeH3iBzQ6AXERCuHeyQ==",
+  "dgSpecHash": "GbYmJD2dRHiY25aN69z81E+u9OynZ3HiHRHR7iZoZ+2kXK3ydwEHCa8SyEo8xdJAVw+H+VgNwJiSLRbeqcKilw==",
   "success": true,
   "projectFilePath": "/Users/mateus.sandes/Personal/StudyProject/tests/StudyProject.Test/StudyProject.Test.csproj",
   "expectedPackageFiles": [
+    "/Users/mateus.sandes/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/mateus.sandes/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
+    "/Users/mateus.sandes/.nuget/packages/dapper/2.1.66/dapper.2.1.66.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/microsoft.codecoverage/17.6.0/microsoft.codecoverage.17.6.0.nupkg.sha512",
+    "/Users/mateus.sandes/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/microsoft.entityframeworkcore/9.0.0/microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.0/microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",
     "/Users/mateus.sandes/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.0/microsoft.entityframeworkcore.analyzers.9.0.0.nupkg.sha512",
