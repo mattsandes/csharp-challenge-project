@@ -1,4 +1,4 @@
-public class createDevicedTO
+public class CreateDeviceDTO
 {
     public string DeviceName { get; set; } = string.Empty;
 }
